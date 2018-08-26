@@ -255,17 +255,17 @@ public class Lienzo extends Canvas implements Runnable, KeyListener {
 
     private void moverNave() {
         if ((this.keys[0] == true && this.keys[1] == false) && (this.nave.getX() - 10 >= 0)) {
-            this.nave.setX(-10);
+            this.nave.setX(-5);
         } else if ((this.keys[0] == false && this.keys[1] == true) && (this.nave.getX() + 10 <= 1200)) {
-            this.nave.setX(10);
+            this.nave.setX(5);
         } else {
             this.nave.setX(0);
         }
 
         if ((this.keys[2] == true && this.keys[3] == false) && (this.nave.getY() - 10 >= 0)) {
-            this.nave.setY(-10);
+            this.nave.setY(-5);
         } else if ((this.keys[2] == false && this.keys[3] == true) && (this.nave.getY() + 10 <= 810)) {
-            this.nave.setY(10);
+            this.nave.setY(5);
         } else {
             this.nave.setY(0);
         }
