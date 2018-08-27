@@ -14,7 +14,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import naves3.Alien;
-import naves3.Moneda;
 import naves3.Nave;
 
 /**
@@ -73,7 +72,7 @@ public class Lienzo extends Canvas implements Runnable, KeyListener {
         // Pintar monedas
         for (int n = 0; n < this.monedas.size(); n++) {
             Moneda euro = this.monedas.get(n);
-            this.buffGraphics.fillOval(euro.getX(), euro.getY(), 50, 50);
+            this.buffGraphics.drawImage(euro.getImg(), euro.getX(), euro.getY(), 50, 50, this);
         }
 
         // Pintar aliens
